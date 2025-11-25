@@ -1,3 +1,7 @@
 # Testando Keylogger
 
-Projeto realizado para entender o funcionamento de um keylogger, como detectá-lo e como proteger os dispositivos.
+Projeto criado para estudar o funcionamento de keyloggers, entender como são detectados e aplicar técnicas de proteção para aumentar a segurança de dispositivos.
+
+# Aviso
+
+**O propósito desse projeto é totalmente educacional. Não utilize para fins maliciosos**
