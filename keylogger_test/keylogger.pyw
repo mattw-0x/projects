@@ -36,5 +36,5 @@ def on_press(key):
                 f.write(f"[{key}]")
 
 #with keyboard.Listener(on_press=on_press) as listener:
-#listener.join()
-    listener.join()
+    #listener.join()
+
