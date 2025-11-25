@@ -1,6 +1,8 @@
 from cryptography.fernet import Fernet
 import os
 
+# Não utilize este código para fins maliciosos e jamais o execute fora de uma máquina virtual. Algumas partes foram comentadas por questões de segurança.
+
 def carregar_chave():
     return open("chave.key", "rb").read()
 
@@ -12,21 +14,22 @@ def descriptografar_arquivo(arquivo, chave):
     with open(arquivo, "wb") as file:
         file.write(dados_descriptografados)
 
-def encontrar_arquivos(diretorio):
-    lista = []
-    for raiz, _, arquivos in os.walk(diretorio):
-        for nome in arquivos:
-            caminho = os.path.join(raiz, nome)
-            if nome != "ransomware.py" and not nome.endswith(".key"):
-                lista.append(caminho)
-    return lista
+#def encontrar_arquivos(diretorio):
+    #lista = []
+    #for raiz, _, arquivos in os.walk(diretorio):
+        #for nome in arquivos:
+            #caminho = os.path.join(raiz, nome)
+            #if nome != "ransomware.py" and not nome.endswith(".key"):
+                #lista.append(caminho)
+    #return lista
 
-def main():
-    chave = carregar_chave()
-    arquivos = encontrar_arquivos("test_files")
-    for arquivo in arquivos:
-        descriptografar_arquivo(arquivo, chave)
-    print("Arquivos restaurados com sucesso")
+#def main():
+    #chave = carregar_chave()
+    #arquivos = encontrar_arquivos("test_files")
+    #for arquivo in arquivos:
+        #descriptografar_arquivo(arquivo, chave)
+    #print("Arquivos restaurados com sucesso")
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+
+    #main()
